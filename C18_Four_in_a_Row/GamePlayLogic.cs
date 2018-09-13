@@ -265,6 +265,18 @@ namespace C18_Four_in_a_Row
             return m_GameMatrix[0, i_Col - 1] == '\0';
         }
 
+        public void Quit()
+        {
+            if (m_CurrentPlayerTurn == m_PlayerOne)
+            {
+                m_PlayerTwo.PlayerScore++;
+            }
+            else
+            {
+                m_PlayerOne.PlayerScore++;
+            }
+        }
+
         public void ChangeTurn()
         {
             if (m_CurrentPlayerTurn == m_PlayerOne)

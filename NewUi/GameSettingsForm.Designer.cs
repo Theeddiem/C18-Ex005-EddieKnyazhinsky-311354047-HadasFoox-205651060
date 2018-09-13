@@ -57,39 +57,39 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(85, 61);
+            this.label2.Location = new System.Drawing.Point(86, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Player 1:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // checkBox1VsPc
             // 
             this.checkBox1VsPc.AutoSize = true;
             this.checkBox1VsPc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1VsPc.Location = new System.Drawing.Point(69, 107);
+            this.checkBox1VsPc.Location = new System.Drawing.Point(66, 108);
             this.checkBox1VsPc.Name = "checkBox1VsPc";
-            this.checkBox1VsPc.Size = new System.Drawing.Size(107, 26);
+            this.checkBox1VsPc.Size = new System.Drawing.Size(112, 26);
             this.checkBox1VsPc.TabIndex = 2;
-            this.checkBox1VsPc.Text = "Player2: ";
+            this.checkBox1VsPc.Text = "Player 2: ";
             this.checkBox1VsPc.UseVisualStyleBackColor = true;
             this.checkBox1VsPc.CheckedChanged += new System.EventHandler(this.checkBox1VsPc_CheckedChanged);
             // 
             // textBoxPlayer2
             // 
             this.textBoxPlayer2.Enabled = false;
-            this.textBoxPlayer2.Location = new System.Drawing.Point(170, 107);
+            this.textBoxPlayer2.Location = new System.Drawing.Point(170, 108);
             this.textBoxPlayer2.Name = "textBoxPlayer2";
-            this.textBoxPlayer2.Size = new System.Drawing.Size(215, 26);
+            this.textBoxPlayer2.Size = new System.Drawing.Size(216, 26);
             this.textBoxPlayer2.TabIndex = 3;
             this.textBoxPlayer2.Text = "[Computer]";
-            
             // 
             // textBoxPlayer1
             // 
-            this.textBoxPlayer1.Location = new System.Drawing.Point(170, 61);
+            this.textBoxPlayer1.Location = new System.Drawing.Point(170, 62);
             this.textBoxPlayer1.Name = "textBoxPlayer1";
-            this.textBoxPlayer1.Size = new System.Drawing.Size(215, 26);
+            this.textBoxPlayer1.Size = new System.Drawing.Size(216, 26);
             this.textBoxPlayer1.TabIndex = 1;
             // 
             // label3
@@ -101,7 +101,6 @@
             this.label3.Size = new System.Drawing.Size(114, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Board Size:";
-            
             // 
             // RowsNumber
             // 
@@ -117,7 +116,7 @@
             0,
             0});
             this.RowsNumber.Name = "RowsNumber";
-            this.RowsNumber.Size = new System.Drawing.Size(61, 26);
+            this.RowsNumber.Size = new System.Drawing.Size(62, 26);
             this.RowsNumber.TabIndex = 4;
             this.RowsNumber.Value = new decimal(new int[] {
             4,
@@ -139,7 +138,7 @@
             0,
             0});
             this.ColsNumber.Name = "ColsNumber";
-            this.ColsNumber.Size = new System.Drawing.Size(61, 26);
+            this.ColsNumber.Size = new System.Drawing.Size(62, 26);
             this.ColsNumber.TabIndex = 5;
             this.ColsNumber.Value = new decimal(new int[] {
             4,
@@ -150,7 +149,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(85, 214);
+            this.label4.Location = new System.Drawing.Point(86, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 9;
@@ -159,7 +158,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(211, 214);
+            this.label5.Location = new System.Drawing.Point(212, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 20);
             this.label5.TabIndex = 10;
@@ -169,7 +168,7 @@
             // 
             this.buttonPlay.Location = new System.Drawing.Point(128, 268);
             this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(232, 41);
+            this.buttonPlay.Size = new System.Drawing.Size(232, 42);
             this.buttonPlay.TabIndex = 6;
             this.buttonPlay.Text = "Play!";
             this.buttonPlay.UseVisualStyleBackColor = true;
@@ -179,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(497, 332);
+            this.ClientSize = new System.Drawing.Size(496, 332);
             this.Controls.Add(this.buttonPlay);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -191,9 +190,10 @@
             this.Controls.Add(this.checkBox1VsPc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "GameSettingsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameSettings";
-            
             ((System.ComponentModel.ISupportInitialize)(this.RowsNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ColsNumber)).EndInit();
             this.ResumeLayout(false);

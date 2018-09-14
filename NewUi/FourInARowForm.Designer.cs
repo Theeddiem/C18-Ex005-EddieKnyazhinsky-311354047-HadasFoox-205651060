@@ -34,20 +34,22 @@
             // buttonFall
             // 
             this.buttonFall.AccessibleName = "ButtonOne";
-            this.buttonFall.Location = new System.Drawing.Point(113, 13);
+            this.buttonFall.Location = new System.Drawing.Point(75, 8);
+            this.buttonFall.Margin = new System.Windows.Forms.Padding(2);
             this.buttonFall.Name = "buttonFall";
-            this.buttonFall.Size = new System.Drawing.Size(75, 23);
+            this.buttonFall.Size = new System.Drawing.Size(50, 15);
             this.buttonFall.TabIndex = 0;
             this.buttonFall.Text = "button1";
             this.buttonFall.UseVisualStyleBackColor = true;
-          this.buttonFall.Click += new System.EventHandler(this.button1_Click);
+            this.buttonFall.Click += new System.EventHandler(this.button1_Click);
             // 
             // FourInARowForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 449);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.buttonFall);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FourInARowForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FourInARowForm";

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>NewUi</RootNamespace>
     <AssemblyName>NewUi</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -95,8 +95,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Empty.jpg" />
-    <None Include="Resources\Coin1.jpg" />
-    <Content Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedCoin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowCoin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,6 +4,14 @@ using System.Text;
 
 namespace C18_Four_in_a_Row
 {
+    public delegate void CellChangeEventHandler(object sender, CellChangeEventArgs e);
+
+    public class CellChangeEventArgs : EventArgs
+    {
+        public int Row;
+        public int Col;
+    }
+
     public class GamePlayLogic
     {
         private char[,] m_GameMatrix;
@@ -13,6 +21,8 @@ namespace C18_Four_in_a_Row
         private Player m_CurrentPlayerTurn;
         private int m_PcMoveRight;
         private int m_PcMoveLeft;
+
+        public event CellChangeEventHandler CellChangeOccured;
 
         public GamePlayLogic(int i_Row, int i_Col, bool i_AgainstPc, Player i_PlayerOne, Player i_PlayerTwo)
         {
@@ -102,7 +112,24 @@ namespace C18_Four_in_a_Row
             }
 
             m_GameMatrix[rowToMark, i_Move - 1] = CurrentPlayer.Coin;
+            CellChange(rowToMark, i_Move - 1);
             return rowToMark;
+        }
+
+        public void CellChange(int i_Row, int i_Col)
+        {
+            CellChangeEventArgs e = new CellChangeEventArgs();
+            e.Row = i_Row;
+            e.Col = i_Col;
+            OnCellChange(e);
+        }
+
+        protected virtual void OnCellChange(CellChangeEventArgs e)
+        {
+            if (CellChangeOccured != null)
+            {
+                CellChangeOccured.Invoke(this, e);
+            }
         }
 
         public bool CheckIfWinner(int i_Row, int i_Col, int i_SequenceSize)

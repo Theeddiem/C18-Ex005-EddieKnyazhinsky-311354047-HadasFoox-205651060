@@ -61,12 +61,11 @@ namespace NewUi.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.Drawing.Bitmap Empty {
+        internal static System.IO.UnmanagedMemoryStream CoinSound {
             get {
-                object obj = ResourceManager.GetObject("Empty", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetStream("CoinSound", resourceCulture);
             }
         }
         
@@ -76,6 +75,16 @@ namespace NewUi.Properties {
         internal static System.Drawing.Bitmap RedCoin {
             get {
                 object obj = ResourceManager.GetObject("RedCoin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteFlag {
+            get {
+                object obj = ResourceManager.GetObject("WhiteFlag", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

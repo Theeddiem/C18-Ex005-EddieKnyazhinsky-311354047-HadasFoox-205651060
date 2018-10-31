@@ -6,11 +6,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace NewUi
+namespace FourInARow
 {
     public partial class GameSettingsForm : Form
     {
-
         public GameSettingsForm()
         {
             InitializeComponent();
@@ -36,13 +35,12 @@ namespace NewUi
             get { return textBoxPlayer2.Text; }
         }
 
-
         private void checkBox1VsPc_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1VsPc.Checked)
             {
                 this.textBoxPlayer2.Enabled = true;
-                textBoxPlayer2.Text= "";
+                textBoxPlayer2.Text = string.Empty;
             }
             else
             {
@@ -60,15 +58,25 @@ namespace NewUi
         {
             this.Hide();
 
+            if (textBoxPlayer1.Text == string.Empty)
+            {
+                textBoxPlayer1.Text = "Player 1";
+            }
+
+            if (textBoxPlayer2.Text == string.Empty)
+            {
+                textBoxPlayer2.Text = "Player 2";
+            }
+
+            if (!checkBox1VsPc.Checked)
+            {
+                textBoxPlayer2.Text = "Computer";
+            }
+
             FourInARowForm fourInARowForm = new FourInARowForm(this);
             fourInARowForm.ShowDialog();
 
             this.Close();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -6,6 +6,7 @@ namespace C18_Four_in_a_Row
 {
     public class PcAi
     {
+        // $G$ CSS-002 (-5) Bad member variable name (should be m_CamelCased)
         private int m_right;
         private int m_left;
         private GamePlayLogic m_CurrentGame;
@@ -22,6 +23,7 @@ namespace C18_Four_in_a_Row
             {
                 for (int j = m_CurrentGame.GameMatirx.GetLength(1) - 1; j >= 0; j--)
                 {
+                    // $G$ CSS-999 (-3) instead of using stirngs in a if statement use constants 
                     if (m_CurrentGame.GameMatirx[i, j] == 'X')
                     {
                         if (canWin(i, j, 3))

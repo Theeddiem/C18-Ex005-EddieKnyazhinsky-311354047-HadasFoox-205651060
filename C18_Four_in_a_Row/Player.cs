@@ -4,6 +4,7 @@ using System.Text;
 
 namespace C18_Four_in_a_Row
 {
+    // $G$ DSN-999 (-3) Better use a struct here
     public class Player
     {
         private readonly string r_PlayerName;
